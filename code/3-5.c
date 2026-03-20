@@ -6,10 +6,10 @@ void my_sum(char c, int args, ...){
     va_start(ap, args);
 
     if(c == 'S') {
-        for(int i=0; i<args; i++){ 
+        for(int i=0; i<args - 1; i++){ 
             printf("%s ", va_arg(ap, char*));
         }
-        printf("\n");
+        printf("%s\n", va_arg(ap, char*));
     }
     else if(c == 'C'){
         for(int i=0; i<args; i++){ 
